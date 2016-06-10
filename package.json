@@ -1,0 +1,37 @@
+{
+  "name": "twilio-stream",
+  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Generate an object stream of paginated Twilio results",
+  "license": "MIT",
+  "repository": "bendrucker/twilio-stream",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "keywords": [
+    "twilio",
+    "stream",
+    "object",
+    "messages"
+  ],
+  "devDependencies": {
+    "nock": "~8.0.0",
+    "standard": "^6.0.0",
+    "tape": "^4.0.0",
+    "tape-catch": "~1.0.5"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "basic-auth-header": "~1.0.1",
+    "jsonstream": "~1.0.3",
+    "paged-http-stream": "~1.0.1",
+    "through2": "~2.0.1"
+  }
+}
