@@ -4,7 +4,7 @@
   "bin": {
     "twilio": "./cli.js"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate an object stream of paginated Twilio results",
   "license": "MIT",
   "repository": "bendrucker/twilio-stream",
