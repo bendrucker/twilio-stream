@@ -1,4 +1,4 @@
-# twilio-stream [![Build Status](https://travis-ci.org/bendrucker/twilio-stream.svg?branch=master)](https://travis-ci.org/bendrucker/twilio-stream)
+# twilio-stream [![Build Status](https://travis-ci.org/bendrucker/twilio-stream.svg?branch=master)](https://travis-ci.org/bendrucker/twilio-stream) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/twilio-stream.svg)](https://greenkeeper.io/)
 
 > Generate an object stream of paginated Twilio results
 
