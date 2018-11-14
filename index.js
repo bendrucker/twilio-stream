@@ -10,13 +10,13 @@ const TWILIO = 'https://api.twilio.com'
 module.exports = Twilio
 
 function Twilio (config) {
-  const headers = {authorization: basic(config.sid, config.token)}
+  const headers = { authorization: basic(config.sid, config.token) }
 
   return function TwilioStream (resource, options) {
     const initialPath = `/2010-04-01/Accounts/${config.sid}/${capitalize(resource)}.json`
     const uri = TWILIO + initialPath + queryString(options)
 
-    return PageStream({uri: uri, headers}, next)
+    return PageStream({ uri: uri, headers }, next)
       .pipe(get(resource))
   }
 
