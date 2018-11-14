@@ -32,7 +32,7 @@ assert(resource, 'must define a twilio resource')
 assert(sid, 'must define --sid or TWILIO_SID')
 assert(token, 'must define --token or TWILIO_TOKEN')
 
-const twilio = Twilio({sid: sid, token: token})
+const twilio = Twilio({ sid: sid, token: token })
 
 twilio(resource, query)
   .pipe(serialize(cli.flags))

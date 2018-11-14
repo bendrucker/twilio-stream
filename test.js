@@ -21,7 +21,7 @@ test('emits a twilio resource as object stream chunks', function (t) {
       pass: 'theToken'
     })
     .reply(200, {
-      messages: [{body: 'Hello world!'}],
+      messages: [{ body: 'Hello world!' }],
       next_page_uri: '/2010-04-01/Accounts/theSid/Messages.json?Page=1&PageSize=50&PageToken=abc'
     })
 
@@ -37,7 +37,7 @@ test('emits a twilio resource as object stream chunks', function (t) {
       pass: 'theToken'
     })
     .reply(200, {
-      messages: [{body: 'Hello world 2!'}],
+      messages: [{ body: 'Hello world 2!' }],
       next_page_uri: null
     })
 
@@ -47,8 +47,8 @@ test('emits a twilio resource as object stream chunks', function (t) {
     .on('error', t.end)
     .on('end', function () {
       t.deepEqual(chunks, [
-        {body: 'Hello world!'},
-        {body: 'Hello world 2!'}
+        { body: 'Hello world!' },
+        { body: 'Hello world 2!' }
       ])
     })
 })
@@ -71,7 +71,7 @@ test('supports custom queries via objects', function (t) {
       pass: 'theToken'
     })
     .reply(200, {
-      messages: [{body: 'Hello world!'}],
+      messages: [{ body: 'Hello world!' }],
       next_page_uri: '/2010-04-01/Accounts/theSid/Messages.json?Page=1&PageSize=50&PageToken=abc'
     })
 
@@ -87,18 +87,18 @@ test('supports custom queries via objects', function (t) {
       pass: 'theToken'
     })
     .reply(200, {
-      messages: [{body: 'Hello world 2!'}],
+      messages: [{ body: 'Hello world 2!' }],
       next_page_uri: null
     })
 
   const chunks = []
-  fetch('messages', {DateSent: '2016-06-09'})
+  fetch('messages', { DateSent: '2016-06-09' })
     .on('data', chunks.push.bind(chunks))
     .on('error', t.end)
     .on('end', function () {
       t.deepEqual(chunks, [
-        {body: 'Hello world!'},
-        {body: 'Hello world 2!'}
+        { body: 'Hello world!' },
+        { body: 'Hello world 2!' }
       ])
     })
 })
@@ -121,7 +121,7 @@ test('supports custom inequality queries via arrays', function (t) {
       pass: 'theToken'
     })
     .reply(200, {
-      messages: [{body: 'Hello world!'}],
+      messages: [{ body: 'Hello world!' }],
       next_page_uri: '/2010-04-01/Accounts/theSid/Messages.json?Page=1&PageSize=50&PageToken=abc'
     })
 
@@ -137,7 +137,7 @@ test('supports custom inequality queries via arrays', function (t) {
       pass: 'theToken'
     })
     .reply(200, {
-      messages: [{body: 'Hello world 2!'}],
+      messages: [{ body: 'Hello world 2!' }],
       next_page_uri: null
     })
 
@@ -147,8 +147,8 @@ test('supports custom inequality queries via arrays', function (t) {
     .on('error', t.end)
     .on('end', function () {
       t.deepEqual(chunks, [
-        {body: 'Hello world!'},
-        {body: 'Hello world 2!'}
+        { body: 'Hello world!' },
+        { body: 'Hello world 2!' }
       ])
     })
 })
